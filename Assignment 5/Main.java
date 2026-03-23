@@ -25,11 +25,11 @@ public class Main {
 
             ArrayList<Account> accounts = new ArrayList<>();
 
-            SavingsAccount sa1 = new SavingsAccount(1001, 5000, c1);
-            CurrentAccount ca1 = new CurrentAccount(2001, 10000, c1);
-            SavingsAccount sa2 = new SavingsAccount(1002, 8000, c2);
-            CurrentAccount ca2 = new CurrentAccount(2002, 15000, c2);
-            SavingsAccount sa3 = new SavingsAccount(1003, 3000, c3);
+            SavingsAccount sa1 = new SavingsAccount(0001, 3000, c1);
+            CurrentAccount ca1 = new CurrentAccount(0002, 10000, c1);
+            SavingsAccount sa2 = new SavingsAccount(0003, 8000, c2);
+            CurrentAccount ca2 = new CurrentAccount(0004, 15000, c2);
+            SavingsAccount sa3 = new SavingsAccount(0005, 3000, c3);
 
             accounts.add(sa1); accounts.add(ca1);
             accounts.add(sa2); accounts.add(ca2);
