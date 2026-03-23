@@ -47,9 +47,37 @@ public class Main {
             loan.printLoanDetails();
             loan.deductEMI(sa1);
 
+            // --- NEW STUFF ADDED BELOW TO SHOW EXCEPTIONS ---
+
+            System.out.println("\n========== Testing Different Exceptions ==========\n");
+
+            // 1. Testing InsufficientBalanceException (Savings Min Balance Rule)
+            try {
+                System.out.println("Attempting to withdraw Rs. 6000 from sa1...");
+                sa1.withdraw(6000); 
+            } catch (InsufficientBalanceException e) {
+                System.out.println("[Caught] " + e.getMessage());
+            }
+
+            // 2. Testing InvalidAccountException (Searching for non-existent ID)
+            try {
+                System.out.println("\nSearching for Account Number: 5555...");
+                findAccount(accounts, 5555);
+            } catch (InvalidAccountException e) {
+                System.out.println("[Caught] " + e.getMessage());
+            }
+
         } catch (InsufficientBalanceException e) {
             System.out.println("[Error] " + e.getMessage());
         }
+    }
+
+    // New Helper Method for InvalidAccountException
+    public static Account findAccount(ArrayList<Account> accounts, int accNo) throws InvalidAccountException {
+        for (Account acc : accounts) {
+            if (acc.accountNumber == accNo) return acc;
+        }
+        throw new InvalidAccountException("Access Denied: Account #" + accNo + " is not registered.");
     }
 
     public static void displayAllInfo(ArrayList<Cust> clients, ArrayList<Account> accounts) {
