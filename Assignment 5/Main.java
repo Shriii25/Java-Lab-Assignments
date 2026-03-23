@@ -7,17 +7,17 @@ public class Main {
         try {
             ArrayList<Cust> clients = new ArrayList<>();
 
-            Cust c1 = new Cust("085", "Kavish", "Nag",
-                    "kavishnag13@gmail.com", "9829326907", "Pune",
-                    "12345678910", "ABCDEFGHIJK");
+            Cust c1 = new Cust("099", "Shriya", "Kurup",
+                    "kurupshriya@gmail.com", "7039193534", "Mumbai",
+                    "0000000001", "PQRSTUVWXYZ");
 
-            Cust c2 = new Cust("086", "Jeff", "Sharma",
-                    "jeff.sharma@gmail.com", "9876543210", "Mumbai",
-                    "98765432109", "XYZABCDEFGH");
+            Cust c2 = new Cust("092", "Khushie", "Agrawal",
+                    "khushieagrawal@gmail.com", "9819101984", "Bhopal",
+                    "98765432109", "LMNOPQRSTU");
 
-            Cust c3 = new Cust("087", "Tony", "Stank",
-                    "iron.man@gmail.com", "9123456789", "Delhi",
-                    "12341234123", "PQRSTUVWXYZ");
+            Cust c3 = new Cust("091", "Khushi", "Harkhani",
+                    "khushiharkhani@gmail.com", "9820924425", "Mumbai",
+                    "12341234123", "ABCDEFGHIJ");
 
             clients.add(c1);
             clients.add(c2);
@@ -37,8 +37,8 @@ public class Main {
 
             System.out.println("\n========== Transactions ==========\n");
 
-            sa1.deposit(2000);
-            sa1.withdraw(1000);
+            sa1.deposit(3000);
+            sa1.withdraw(4000);
             sa1.applyInterest();
 
             System.out.println();
